@@ -424,7 +424,6 @@ svg {
 }
 
 @media screen and (max-width: 1024px) {
-
 }
 @media screen and (max-width: 992px) {
   .services {
@@ -437,15 +436,14 @@ svg {
       // justify-content: unset;
       flex-wrap: wrap;
       // flex-direction: column;
-      .type:nth-child(odd){
-        // margin-right: 20px;
-      }
-      .type{
+      .type {
         flex: 0 48%;
         width: 78%;
         align-self: center;
         margin-bottom: 25px;
-        h4{font-size: 1.2rem;}
+        h4 {
+          font-size: 1.2rem;
+        }
       }
     }
   }
@@ -462,11 +460,325 @@ svg {
         margin-bottom: 40px;
       }
     }
-    .services-types{
+    .services-types {
       flex-direction: column;
-      .type{
+      .type {
         width: 90%;
       }
     }
+  }
+}
+
+// apply
+.apply {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  font-family: "Ubuntu", sans-serif;
+  background-image: url(../images/house.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $mainDark;
+    opacity: 0.9;
+  }
+  .inner-container {
+    position: relative;
+    z-index: 2;
+  }
+  .subheading {
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  .heading {
+    font-size: 14px;
+    width: 50%;
+    line-height: 1.5;
+  }
+  .registration {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    .reg-way {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: #fff;
+      padding: 30px;
+      width: 47%;
+      border-radius: 10px;
+      box-shadow: 12px 11px 10px 4px $mainDark;
+      transition: all 0.3s;
+      cursor: pointer;
+
+      .icon {
+        padding: 10px;
+        // margin-right: 5px;
+        display: inline-block;
+        border-radius: 50%;
+        border: 3px solid $mainDark;
+        transition: all 0.3s;
+        display: flex;
+        align-self: center;
+        margin-right: 15px;
+        // box-shadow: 0px 0px 2px $mainDark;
+      }
+      i {
+        // text-shadow: 0 0 1px #000;
+        color: $mainDark;
+        height: 54px;
+        width: 54px;
+        transition: all 0.3s;
+
+        &:before {
+          position: relative;
+          top: 2px;
+          right: -2px;
+        }
+      }
+      .inner-text {
+        width: 80%;
+
+        h4 {
+          color: $mainDark;
+          margin-bottom: 10px;
+        }
+        p {
+          color: rgba(51, 60, 80, 0.77);
+          font-weight: normal;
+        }
+      }
+      &:hover {
+        background-color: $mainDark;
+      }
+      &:hover .icon {
+        border-color: $main2;
+      }
+      &:hover i {
+        color: $main2;
+      }
+      &:hover h4 {
+        color: #fff;
+      }
+      &:hover p {
+        color: rgba(216, 216, 216, 0.77);
+      }
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .apply {
+    .heading {
+      width: 100%;
+    }
+    .registration {
+      flex-direction: column;
+      align-items: center;
+
+      .reg-way {
+        width: 80%;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .apply {
+    .registration {
+      .reg-way {
+        width: 100%;
+        // padding: 10px;
+        // display: flex;
+        flex-direction: column;
+
+        .icon {
+          padding: 5px;
+          i:before {
+            height: 10px;
+          }
+        }
+        .inner-text {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// footer
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-family: "Ubuntu", sans-serif;
+
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    // width: 70%;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+  .logo-area {
+    // flex-grow: 0.1;
+    margin-bottom: 40px;
+  }
+  .logo {
+    width: 30%;
+    text-transform: uppercase;
+    color: $mainDark;
+    font-weight: bold;
+    font-family: "Fjalla One", sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    pointer-events: none;
+    // text-align: center;
+    align-items: center;
+
+    span {
+      background-color: #f7b63c;
+      padding: 6px;
+      border-radius: 50%;
+      font-size: 1.7rem;
+      position: relative;
+      color: #fff;
+      bottom: 5px;
+    }
+  }
+  .personal-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .info-part {
+      display: flex;
+
+      i {
+        color: $mainDark;
+      }
+      .text {
+      }
+      p {
+        color: rgba(10, 23, 63, 0.77);
+        margin-top: 0;
+        margin-left: 15px;
+      }
+    }
+    .icons {
+      // margin-left: 20px;
+      margin-top: 10px;
+      i {
+        color: $mainDark;
+        padding: 4px;
+        border: 2px solid $mainDark;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      a:last-child i {
+        color: $main2;
+        border-color: $main2;
+        cursor: pointer;
+      }
+    }
+  }
+  .section {
+    .underlined {
+      color: $mainDark;
+      position: relative;
+      margin-bottom: 30px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 40%;
+        height: 3px;
+        background-color: $main2;
+        border-radius: 10px;
+        bottom: -8px;
+        left: 0;
+      }
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        margin-bottom: 15px;
+        a {
+          text-decoration: none;
+          color: rgba(10, 23, 63, 0.77);
+          transition: all 0.3s;
+
+          &:hover {
+            color: $main2;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer .footer-content{
+
+  }
+}
+@media screen and (max-width: 426px) {
+  .footer {
+    .footer-content{
+      flex-direction: column;
+      align-content: center;
+    }
+    
+  }
+}
+
+// copyright
+.copyright {
+  // padding: 5px;
+  background-color: $mainDark;
+  font-family: "Ubuntu", sans-serif;
+
+  .cp-content {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+
+    .section {
+      p {
+        span {
+          font-weight: bold;
+
+          span{
+            color: $main2;
+          }
+        }
+        .highlight{
+          font-weight: bold;
+          background-color: rgba(#fff, 0.9);
+          padding: 5px;
+          border-radius: 10px;
+          color: $mainDark;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:632px){
+  .copyright .cp-content{
+    flex-direction: column;
+    align-items: center;
+  }
+  .hide-mobile{
+    display: none;
+
   }
 }
