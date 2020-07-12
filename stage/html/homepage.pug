@@ -1,0 +1,81 @@
+- var pageTitle = "Homepage";
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title #{pageTitle}
+    include pug/layout/styles
+  body
+    .landing-page
+      .overlay
+      .navbar
+        .container
+          .navbar-elements
+            .logo twenty 
+              span 11
+            ul.nav-links
+              li
+                a(href="#") Home
+              li
+                a(href="#") Our Rent
+              li
+                a(href="#") Why US
+              li
+                a(href="#") FAQ
+              li
+                a(href="#") Apply Now
+            .burger
+              .line1
+              .line2
+              .line3
+      .get-started
+        h2 Charitable housing company
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto inventore iure esse minus, quam expedita.
+        button Get started!
+
+    //- wave
+    svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 1440 320')
+      path(fill='#fff' fill-opacity='1' d='M0,192L80,192C160,192,320,192,480,197.3C640,203,800,213,960,186.7C1120,160,1280,96,1360,64L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z')
+    
+    //- about us
+    .about-us
+      .container
+        .about-us-content
+          .text
+            h4.heading about us
+            h3.subheading Charitable Housing company
+            p.para Our products are fully custom-made, built with the latest technologies and cloud architectures.
+            p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum repellat harum accusamus pariatur veritatis odit rerum quo deleniti architecto cupiditate non at laudantium, sequi doloribus aliquid perspiciatis sunt nulla omnis.
+            button Read More!
+          .pic
+            img(src="images/workplace.jpeg", alt="") 
+
+    //- services
+    .services
+      .container
+        .services-headline
+          .heading-area
+            h4.heading our services
+            h3.subheading Transforming your ideas into Reality
+          button All Services
+        .services-types
+          .type
+            .icon
+              i.fas.fa-money-bill-wave.fa-3x.fa-fw
+            h4 Flexible rentsand money
+          .type
+            .icon
+              i.fas.fa-user-friends.fa-3x.fa-fw
+            h4 Work and opportunities
+          .type
+            .icon
+              i.fas.fa-laptop-house.fa-3x.fa-fw
+            h4 Community engagement
+          .type
+            .icon
+              i.far.fa-comments.fa-3x.fa-fw
+            h4 Coaching and mentoring
+
+
+    include pug/layout/scripts
