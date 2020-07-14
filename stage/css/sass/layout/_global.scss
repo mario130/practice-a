@@ -180,11 +180,7 @@ svg {
 		}
 	}
 }
-@media only screen and  (max-device-height: 500px) and (orientation: landscape) {
-	svg{
-		display: none;
-	}
-}
+
 
 @keyframes navLinkFade {
 	from {
@@ -870,5 +866,13 @@ svg {
 	}
 	.hide-mobile {
 		display: none;
+	}
+}
+@media only screen and  (max-device-height: 500px) and (orientation: landscape) {
+	svg{
+		display: none;
+	}
+	.landing-page{
+		padding-bottom: 20px;
 	}
 }
