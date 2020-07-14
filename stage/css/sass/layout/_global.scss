@@ -123,16 +123,17 @@ svg {
 }
 
 @media screen and (min-width: 1400px) {
-  .navbar{
-    .navbar-elements{
-      .logo, .logo span{
-        font-size: 1.7rem;
-      }
-      .nav-links li a{
-        font-size: 1rem;
-      }
-    }
-  }
+	.navbar {
+		.navbar-elements {
+			.logo,
+			.logo span {
+				font-size: 1.7rem;
+			}
+			.nav-links li a {
+				font-size: 1rem;
+			}
+		}
+	}
 }
 @media screen and (max-width: 1024px) {
 	.navbar .navbar-elements .nav-links {
@@ -180,7 +181,6 @@ svg {
 	}
 }
 
-
 @keyframes navLinkFade {
 	from {
 		opacity: 0;
@@ -194,8 +194,7 @@ svg {
 .landing-content {
 	display: flex;
 	justify-content: space-around;
-  align-items: center;
-  ;
+	align-items: center;
 }
 .illustration {
 	width: 30%;
@@ -213,8 +212,8 @@ svg {
 	font-family: "Ubuntu", sans-serif;
 	width: 50%;
 	// position: relative;
-  z-index: 2;
-  margin-bottom: 20px;
+	z-index: 2;
+	margin-bottom: 20px;
 	// height: 100%;
 
 	h2 {
@@ -246,28 +245,27 @@ svg {
 	}
 }
 @media screen and (min-width: 1400px) {
-  .landing-content{
-    margin-top: 5%;
-    .get-started{
-      h2{
-        font-size: 2.3rem;
-      }
-      p{
-        font-size: 1.4rem;
-      }
-    }
-  }
+	.landing-content {
+		margin-top: 5%;
+		.get-started {
+			h2 {
+				font-size: 2.3rem;
+			}
+			p {
+				font-size: 1.4rem;
+			}
+		}
+	}
 }
 @media screen and (max-width: 1024px) {
-  .landing-content{
-    margin-top: 40px
-  }
+	.landing-content {
+		margin-top: 40px;
+	}
 	.get-started {
-    // width: 50%;
-    h2{
-      margin-bottom: 18px;
-    }
-    
+		// width: 50%;
+		h2 {
+			margin-bottom: 18px;
+		}
 	}
 }
 @media screen and (max-width: 768px) {
@@ -280,10 +278,10 @@ svg {
 	}
 	.get-started {
 		width: 90%;
-    order: 2;
-    p{
-      font-size: 1rem;
-    }
+		order: 2;
+		p {
+			font-size: 1rem;
+		}
 	}
 }
 @media screen and (max-width: 600px) {
@@ -292,8 +290,8 @@ svg {
 	}
 	.get-started {
 		// width: 92%;
-    width: 100%;
-    padding: 16px;
+		width: 100%;
+		padding: 16px;
 		// position: absolute;
 		// bottom: 50%;
 	}
@@ -374,16 +372,12 @@ svg {
 	}
 }
 @media screen and (min-width: 1400px) {
-  .about-us .about-us-content{
-
-    .text{
-      width: 50%;
-      font-size: 1.3rem;
-    }
-    .pic{
-      
-    }
-  }
+	.about-us .about-us-content {
+		.text {
+			width: 50%;
+			font-size: 1.3rem;
+		}
+	}
 }
 @media screen and (max-width: 1024px) {
 	.about-us {
@@ -656,14 +650,14 @@ svg {
 	}
 }
 @media screen and (min-width: 1400px) {
-  .apply .inner-container{
-    h3{
-      font-size: 1.8rem;
-    }
-    h4{
-      font-size: 1rem;
-    }
-  }
+	.apply .inner-container {
+		h3 {
+			font-size: 1.8rem;
+		}
+		h4 {
+			font-size: 1rem;
+		}
+	}
 }
 @media screen and (max-width: 992px) {
 	.apply {
@@ -815,9 +809,9 @@ svg {
 	}
 }
 @media screen and (min-width: 1400px) {
-  .footer .footer-content{
-    font-size: 1.3rem;
-  }
+	.footer .footer-content {
+		font-size: 1.3rem;
+	}
 }
 @media screen and (max-width: 426px) {
 	.footer {
@@ -860,9 +854,9 @@ svg {
 	}
 }
 @media screen and (min-width: 1400px) {
-  .copyright .cp-content{
-    font-size: 1.2rem;
-  }
+	.copyright .cp-content {
+		font-size: 1.2rem;
+	}
 }
 @media screen and (max-width: 632px) {
 	.copyright .cp-content {
