@@ -65,24 +65,17 @@
     }
   }
   .section {
-    .underlined {
+    h4 {
       color: $mainDark;
       position: relative;
       margin-bottom: 30px;
-      &::after {
-        content: "";
-        position: absolute;
-        width: 40%;
-        height: 3px;
-        background-color: $main2;
-        border-radius: 10px;
-        bottom: -8px;
-        left: 0;
-      }
+      transition: all 0.4s;
+      cursor: pointer;
     }
     ul {
       list-style: none;
       padding: 0;
+
       li {
         margin-bottom: 15px;
         a {
@@ -107,6 +100,23 @@
     .footer-content {
       flex-direction: column;
       align-content: center;
+      .section {
+        h4.active {
+          &::after {
+            content: "";
+            position: absolute;
+            width: 40%;
+            height: 3px;
+            background-color: $main2;
+            border-radius: 10px;
+            bottom: -8px;
+            left: 0;
+          }
+        }
+        ul {
+          display: none;
+        }
+      }
     }
   }
 }

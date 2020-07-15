@@ -57,9 +57,11 @@
         flex: 0.7;
         // width: 90%;
         margin-right: 0;
-        margin-left: 20px;
+        margin-left: 30px;
         border-radius: 10px;
         overflow: hidden;
+        border-top: 5px solid $mainDark;
+        filter: drop-shadow(2px 2px 3px #000);
         img {
           width: 100%;
         }
@@ -74,11 +76,38 @@
       flex-direction: row-reverse;
 
       .pic {
-        margin-right: 20px;
+        margin-right: 30px;
         margin-left: 0;
       }
     }
     &:not(:nth-of-type(2)) {
+    }
+  }
+}
+@media screen and (max-width: 950px){
+  .sections{
+    section{
+      &:not(:first-of-type){
+        flex-direction: column-reverse;
+        .pic{
+          width: 80%;
+          margin: 0 auto 25px;
+          
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px){
+  .sections{
+    section{
+      &:not(:first-of-type){
+        flex-direction: column-reverse;
+        .pic{
+          width: 100%;
+          
+        }
+      }
     }
   }
 }

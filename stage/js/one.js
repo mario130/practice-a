@@ -51,6 +51,15 @@ navlinks.forEach((link) => {
   if (link.dataset.page === document.title) link.classList.add("active");
 });
 
+// open footer sections
+const footerLists = document.querySelectorAll('.footer .section');
+footerLists.forEach(list => {
+  list.addEventListener('click', function () {
+    $(this).children('h4').toggleClass('active').parent().siblings().children('h4').removeClass('active')
+    $(this).children('ul').slideToggle().parent().siblings().children('ul').slideUp()
+  })
+})
+
 // let links = document.querySelectorAll("a");
 // links.forEach((link) => {
 // 	link.addEventListener("click", (e) => e.preventDefault());
