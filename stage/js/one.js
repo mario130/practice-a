@@ -42,6 +42,10 @@ if (document.title === "Homepage") {
     }
   });
 }
+let navlinks = document.querySelectorAll('.nav-links li a');
+navlinks.forEach(link => {
+  if(link.dataset.page === document.title) link.classList.add('active')
+})
 
 // let links = document.querySelectorAll("a");
 // links.forEach((link) => {

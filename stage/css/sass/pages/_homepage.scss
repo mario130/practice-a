@@ -76,6 +76,14 @@ svg {
       background-color: $mainDark;
       border-color: #fff;
       color: #fff;
+      a{
+        transition: all .3s;
+        color: #fff;
+      }
+    }
+    a{
+      text-decoration: unset;
+      color: $main2;
     }
   }
 }

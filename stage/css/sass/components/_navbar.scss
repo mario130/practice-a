@@ -46,6 +46,20 @@
           &:hover {
             color: $main2;
           }
+          position: relative;
+          &.active {
+            color: $main2;
+            &::before {
+              content: "";
+              height: 3px;
+              width: 100%;
+              position: absolute;
+              bottom: -6px;
+              left: 0;
+              background-color: #f7b63c;
+              border-radius: 5px;
+            }
+          }
         }
       }
     }
@@ -125,6 +139,15 @@
 
       li {
         opacity: 0;
+        a.active::before {
+          content: "";
+          height: 100%;
+          width: 3px;
+          position: absolute;
+          bottom: 0;
+          left: -6px;
+          background-color: #f7b63c;
+        }
       }
     }
   }

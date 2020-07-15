@@ -8,8 +8,8 @@ body {
 }
 .whyus .navbar {
   background-color: $mainDark;
-  // position: sticky;
-  // top: 0;
+  position: sticky;
+  top: 0;
 }
 
 .whyus-main {
@@ -24,7 +24,7 @@ body {
     line-height: 1.5;
     // margin-right: 20px;
 
-    .heading{
+    .heading {
       font-weight: normal;
       font-family: "Ubuntu", sans-serif;
     }
@@ -71,7 +71,7 @@ body {
     }
   }
   .pic {
-    flex: .8;
+    flex: 0.8;
     padding: 80px 0 80px 60px;
     img {
       width: 100%;
@@ -80,32 +80,64 @@ body {
   }
 }
 
-@media screen and (max-width: 1000px){
-  .whyus-main{
-    .text-content{
+@media screen and (max-width: 1000px) {
+  .whyus-main {
+    .text-content {
       margin-top: 20px;
+      margin-bottom: 20px;
     }
   }
 }
-@media screen and (max-width: 768px){
-  .whyus-main{
+@media screen and (max-width: 768px) {
+  .whyus-main {
     flex-direction: column-reverse;
     text-align: center;
 
-    .text-content{
+    .text-content {
       width: 100%;
     }
-    .pic{
+    .pic {
       width: 80%;
       padding: 0;
       margin: 20px 0;
     }
   }
 }
-@media screen and (max-width: 425px){
-  .whyus-main{
-    .subheading{
+@media screen and (max-width: 425px) {
+  .whyus-main {
+    .subheading {
       line-height: 1.2;
     }
+  }
+}
+
+// reasons
+.reasons {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(224, 224, 224, 1) 100%
+  );
+  padding: 40px 0;
+  text-align: center;
+
+  .subheading {
+    margin: 25px 0;
+  }
+  .reasons-list{
+    // list-style-type: upper-roman;
+    padding-left: 20px;
+  }
+  .reason {
+    text-align: left;
+    color: #262626;
+    line-height: 2;
+    font-family: 'Ubuntu', sans-serif;
+  }
+}
+@media screen and (max-width: 600px){
+  .reasons-list{
+    padding-left: 10px;
   }
 }
