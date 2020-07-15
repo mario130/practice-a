@@ -1,0 +1,504 @@
+// main
+.landing-page {
+  min-height: 100vh;
+  background-image: url(../images/house.jpeg);
+  background-size: cover;
+  position: relative;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(30, 45, 77, 1) 100%
+    );
+  }
+}
+svg {
+  position: absolute;
+  bottom: -80px;
+  z-index: 4;
+}
+@media screen and (max-width: 1024px) {
+  svg {
+    bottom: -27px;
+  }
+}
+
+.landing-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.illustration {
+  width: 30%;
+  // position: relative;
+  // top: ;
+  z-index: 2;
+  order: 2;
+
+  img {
+    width: 100%;
+  }
+}
+
+.get-started {
+  order: 1;
+  font-family: "Ubuntu", sans-serif;
+  width: 50%;
+  z-index: 2;
+  margin-bottom: 20px;
+  h2 {
+    color: $main2;
+    font-size: 2rem;
+  }
+  p {
+    color: rgb(226, 226, 226);
+    margin-top: 0;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  button {
+    background: none;
+    border: 2px solid $main2;
+    padding: 15px;
+    border-radius: 50px;
+    color: $main2;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s;
+    &:hover {
+      background-color: $mainDark;
+      border-color: #fff;
+      color: #fff;
+    }
+  }
+}
+@media screen and (min-width: 1400px) {
+  .landing-content {
+    margin-top: 5%;
+    .get-started {
+      h2 {
+        font-size: 2.3rem;
+      }
+      p {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .landing-content {
+    margin-top: 40px;
+  }
+  .get-started {
+    h2 {
+      margin-bottom: 18px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .landing-content {
+    flex-direction: column;
+  }
+  .illustration {
+    order: 1;
+    width: 60%;
+  }
+  .get-started {
+    width: 90%;
+    order: 2;
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .illustration {
+    width: 70%;
+  }
+  .get-started {
+    width: 100%;
+    padding: 16px;
+  }
+}
+
+// about us
+.about-us {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+  z-index: 5;
+  font-family: "Ubuntu", sans-serif;
+  .about-us-content {
+    display: flex;
+    justify-content: space-between;
+    .text {
+      width: 40%;
+      align-self: center;
+      .para {
+        color: #000;
+      }
+      p {
+        color: #555;
+      }
+      button {
+        background: none;
+        border: 2px solid #fff;
+        padding: 15px;
+        border-radius: 50px;
+        color: $main2;
+        font-weight: bold;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.4s;
+        background-color: $mainDark;
+        &:hover {
+          background-color: $mainDark;
+          border-color: #fff;
+          color: #fff;
+        }
+      }
+    }
+    .pic {
+      width: 40%;
+      transition: all 0.3s;
+      border-radius: 10px;
+      background-color: $main2;
+      align-self: center;
+      img {
+        width: 100%;
+        border-radius: 10px;
+        transform: rotateZ(10deg);
+        padding: 3px;
+        background-color: $mainDark;
+        transition: all 0.3s;
+      }
+      &:hover {
+        transform: rotateZ(-10deg);
+        background-color: transparent;
+        img {
+          background-color: $main2;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1400px) {
+  .about-us .about-us-content {
+    .text {
+      width: 50%;
+      font-size: 1.3rem;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .about-us {
+    .about-us-content {
+      flex-direction: column;
+      .text {
+        width: 100%;
+        margin-bottom: 80px;
+      }
+      .pic {
+        width: 60%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .about-us .about-us-content .pic {
+    width: 80%;
+  }
+}
+
+// services
+.services {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #ececec;
+  .services-headline {
+    display: flex;
+    justify-content: space-between;
+    .heading-area {
+      width: 30%;
+      align-self: center;
+    }
+    button {
+      background: none;
+      border: 2px solid $mainDark;
+      padding: 15px;
+      border-radius: 50px;
+      color: $mainDark;
+      font-weight: bold;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.4s;
+      align-self: center;
+      &:hover {
+        background-color: $mainDark;
+        border-color: $mainDark;
+        color: #fff;
+      }
+    }
+  }
+  .services-types {
+    display: flex;
+    justify-content: space-between;
+    .type {
+      background-color: #fff;
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: 2px 6px 11px 2px #ddd;
+      transition: all 0.3s;
+      cursor: pointer;
+      width: 22%;
+      &:hover {
+        background-color: $mainDark;
+      }
+      .icon {
+        padding: 20px;
+        display: inline-block;
+        border-radius: 50%;
+        border: 3px solid $mainDark;
+        transition: all 0.3s;
+      }
+      i {
+        color: $mainDark;
+        height: 54px;
+        width: 54px;
+        transition: all 0.3s;
+        &:before {
+          position: relative;
+          top: 2px;
+          right: 2px;
+        }
+      }
+      h4 {
+        color: $darkBlue;
+        font-size: 20px;
+      }
+      &:hover .icon {
+        border-color: $main2;
+      }
+      &:hover i {
+        color: $main2;
+      }
+      &:hover h4 {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .services {
+    .services-headline {
+      .heading-area {
+        width: 50%;
+      }
+    }
+    .services-types {
+      flex-wrap: wrap;
+      .type {
+        flex: 0 48%;
+        width: 78%;
+        align-self: center;
+        margin-bottom: 25px;
+        h4 {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .services {
+    .services-headline {
+      flex-direction: column;
+      .heading-area {
+        width: 100%;
+      }
+      button {
+        margin-top: 10px;
+        margin-bottom: 40px;
+      }
+    }
+    .services-types {
+      flex-direction: column;
+      .type {
+        width: 90%;
+      }
+    }
+  }
+}
+
+// apply
+.apply {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  font-family: "Ubuntu", sans-serif;
+  background-image: url(../images/house.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $mainDark;
+    opacity: 0.9;
+  }
+  .inner-container {
+    position: relative;
+    z-index: 2;
+  }
+  .subheading {
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  .heading {
+    font-size: 14px;
+    width: 50%;
+    line-height: 1.5;
+  }
+  .registration {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    .reg-way {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: #fff;
+      padding: 30px;
+      width: 47%;
+      border-radius: 10px;
+      box-shadow: 12px 11px 10px 4px $mainDark;
+      transition: all 0.3s;
+      cursor: pointer;
+      .icon {
+        padding: 10px;
+        display: inline-block;
+        border-radius: 50%;
+        border: 3px solid $mainDark;
+        transition: all 0.3s;
+        display: flex;
+        align-self: center;
+        margin-right: 15px;
+      }
+      i {
+        color: $mainDark;
+        height: 54px;
+        width: 54px;
+        transition: all 0.3s;
+        &:before {
+          position: relative;
+          top: 2px;
+          right: -2px;
+        }
+      }
+      .inner-text {
+        width: 80%;
+        h4 {
+          color: $mainDark;
+          margin-bottom: 10px;
+        }
+        p {
+          color: rgba(51, 60, 80, 0.77);
+          font-weight: normal;
+        }
+      }
+      &:hover {
+        background-color: $mainDark;
+      }
+      &:hover .icon {
+        border-color: $main2;
+      }
+      &:hover i {
+        color: $main2;
+      }
+      &:hover h4 {
+        color: #fff;
+      }
+      &:hover p {
+        color: rgba(216, 216, 216, 0.77);
+      }
+    }
+  }
+}
+@media screen and (min-width: 1400px) {
+  .apply .inner-container {
+    h3 {
+      font-size: 1.8rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .apply {
+    .heading {
+      width: 100%;
+    }
+    .registration {
+      flex-direction: column;
+      align-items: center;
+
+      .reg-way {
+        width: 80%;
+        margin-bottom: 40px;
+        padding: 22px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .apply {
+    .registration {
+      .reg-way {
+        width: 100%;
+        // padding: 10px;
+        // display: flex;
+        flex-direction: column;
+
+        .icon {
+          padding: 10px;
+          i:before {
+            height: 10px;
+          }
+        }
+        .inner-text {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-device-height: 500px) and (orientation: landscape) {
+  svg {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  svg {
+    display: none;
+  }
+}
+@media only screen and (max-device-height: 500px) and (orientation: landscape) {
+  .landing-content {
+    padding-bottom: 30px;
+  }
+}

@@ -1,878 +1,331 @@
 // global settings
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
-	min-height: 1000px;
-	background-color: #fff;
+  min-height: 1000px;
+  background-color: #fff;
 }
-
 .container {
-	width: 85%;
-	margin: auto;
+  width: 85%;
+  margin: auto;
 }
-.landing-page {
-	min-height: 100vh;
-	background-image: url(../images/house.jpeg);
-	background-size: cover;
-	position: relative;
-	.overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		background: rgb(0, 0, 0);
-		background: linear-gradient(
-			90deg,
-			rgba(0, 0, 0, 0.8) 0%,
-			rgba(30, 45, 77, 1) 100%
-		);
-	}
-}
+
+// navbar
 .navbar {
-	// background-color: #5d4954;
-	background-color: transparent;
-	// background-color: $mainDark;
-	padding-top: 40px;
-	position: sticky;
-	top: -40px;
-	z-index: 3;
-	transition: all 0.3s;
-
-	.navbar-elements {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		min-height: 8vh;
-
-		.logo {
-			text-transform: uppercase;
-			color: #fff;
-			font-weight: bold;
-			font-family: "Fjalla One", sans-serif;
-			letter-spacing: 2px;
-			font-size: 1.5rem;
-			pointer-events: none;
-
-			span {
-				background-color: $main2;
-				padding: 5px;
-				border-radius: 50%;
-				font-size: 1.2rem;
-				position: relative;
-				bottom: 2px;
-				// font-family: 'Fjalla One', sans-serif;
-			}
-		}
-		.nav-links {
-			display: flex;
-			justify-content: space-between;
-			width: 45%;
-			padding-left: 0;
-
-			li {
-				list-style: none;
-
-				a {
-					font-family: "Ubuntu", sans-serif;
-					text-decoration: none;
-					color: rgb(226, 226, 226);
-					letter-spacing: 3px;
-					font-size: 14px;
-					transition: color 0.6s;
-					font-weight: bold;
-					&:hover {
-						color: $main2;
-					}
-				}
-			}
-		}
-		.burger {
-			display: none;
-
-			div {
-				width: 25px;
-				height: 3px;
-				background-color: rgb(226, 226, 226);
-				margin: 5px;
-				transition: all 0.3s ease;
-			}
-		}
-	}
+  // background-color: #5d4954;
+  background-color: transparent;
+  // background-color: $mainDark;
+  padding-top: 40px;
+  position: sticky;
+  top: -40px;
+  z-index: 3;
+  transition: all 0.3s;
+  .navbar-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    .logo {
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: bold;
+      font-family: "Fjalla One", sans-serif;
+      letter-spacing: 2px;
+      font-size: 1.5rem;
+      pointer-events: none;
+      span {
+        background-color: $main2;
+        padding: 5px;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        position: relative;
+        bottom: 2px;
+        // font-family: 'Fjalla One', sans-serif;
+      }
+    }
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      width: 45%;
+      padding-left: 0;
+      li {
+        list-style: none;
+        a {
+          font-family: "Ubuntu", sans-serif;
+          text-decoration: none;
+          color: rgb(226, 226, 226);
+          letter-spacing: 3px;
+          font-size: 14px;
+          transition: color 0.6s;
+          font-weight: bold;
+          &:hover {
+            color: $main2;
+          }
+        }
+      }
+    }
+    .burger {
+      display: none;
+      div {
+        width: 25px;
+        height: 3px;
+        background-color: rgb(226, 226, 226);
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+    }
+  }
 }
 .nav-active {
-	transform: translateX(0%) !important;
-	position: fixed;
+  transform: translateX(0%) !important;
+  position: fixed;
 }
 .toggle {
-	.line1 {
-		transform: rotate(-45deg) translate(-5px, 6px);
-	}
-	.line2 {
-		opacity: 0;
-	}
-	.line3 {
-		transform: rotate(45deg) translate(-5px, -6px);
-	}
-}
-svg {
-	position: absolute;
-	bottom: -80px;
-	z-index: 4;
+  .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .line2 {
+    opacity: 0;
+  }
+  .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
 }
 
 @media screen and (min-width: 1400px) {
-	.navbar {
-		.navbar-elements {
-			.logo,
-			.logo span {
-				font-size: 1.7rem;
-			}
-			.nav-links li a {
-				font-size: 1rem;
-			}
-		}
-	}
+  .navbar {
+    .navbar-elements {
+      .logo,
+      .logo span {
+        font-size: 1.7rem;
+      }
+      .nav-links li a {
+        font-size: 1rem;
+      }
+    }
+  }
 }
 @media screen and (max-width: 1024px) {
-	.navbar .navbar-elements .nav-links {
-		width: 60%;
-	}
-	svg {
-		bottom: -27px;
-	}
+  .navbar .navbar-elements .nav-links {
+    width: 60%;
+  }
 }
-// body{overflow: hidden;}
+
+// also navbar
 @media screen and (max-width: 768px) {
-	body,
-	html {
-		overflow-x: hidden;
-	}
-	svg {
-		display: none;
-	}
-	.navbar .navbar-elements {
-		.burger {
-			display: block;
-			cursor: pointer;
-		}
+  body,
+  html {
+    overflow-x: hidden;
+  }
+  .navbar .navbar-elements {
+    .burger {
+      display: block;
+      cursor: pointer;
+    }
+    .nav-links {
+      position: absolute;
+      right: 0;
+      height: 100vh;
+      top: 0vh;
+      background-color: $mainDark;
+      // background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(30,45,77,1) 100%);
 
-		.nav-links {
-			position: absolute;
-			right: 0;
-			height: 100vh;
-			top: 0vh;
-			background-color: $mainDark;
-			// background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(30,45,77,1) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
 
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			text-align: center;
-			width: 100%;
-			transform: translateX(100%);
-			transition: transform 0.5s ease-in;
-
-			li {
-				opacity: 0;
-			}
-		}
-	}
+      li {
+        opacity: 0;
+      }
+    }
+  }
 }
-
 
 @keyframes navLinkFade {
-	from {
-		opacity: 0;
-		transform: translateX(50px);
-	}
-	to {
-		opacity: 1;
-		transform: translateX(0px);
-	}
-}
-.landing-content {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-}
-.illustration {
-	width: 30%;
-	// position: relative;
-	// top: ;
-	z-index: 2;
-	order: 2;
-
-	img {
-		width: 100%;
-	}
-}
-.get-started {
-	order: 1;
-	font-family: "Ubuntu", sans-serif;
-	width: 50%;
-	// position: relative;
-	z-index: 2;
-	margin-bottom: 20px;
-	// height: 100%;
-
-	h2 {
-		color: $main2;
-		font-size: 2rem;
-	}
-	p {
-		color: rgb(226, 226, 226);
-		margin-top: 0;
-		font-size: 1.2rem;
-		line-height: 1.5;
-	}
-	button {
-		background: none;
-		border: 2px solid $main2;
-		padding: 15px;
-		border-radius: 50px;
-		color: $main2;
-		font-weight: bold;
-		letter-spacing: 1px;
-		cursor: pointer;
-		transition: all 0.4s;
-
-		&:hover {
-			background-color: $mainDark;
-			border-color: #fff;
-			color: #fff;
-		}
-	}
-}
-@media screen and (min-width: 1400px) {
-	.landing-content {
-		margin-top: 5%;
-		.get-started {
-			h2 {
-				font-size: 2.3rem;
-			}
-			p {
-				font-size: 1.4rem;
-			}
-		}
-	}
-}
-@media screen and (max-width: 1024px) {
-	.landing-content {
-		margin-top: 40px;
-	}
-	.get-started {
-		// width: 50%;
-		h2 {
-			margin-bottom: 18px;
-		}
-	}
-}
-@media screen and (max-width: 768px) {
-	.landing-content {
-		flex-direction: column;
-	}
-	.illustration {
-		order: 1;
-		width: 60%;
-	}
-	.get-started {
-		width: 90%;
-		order: 2;
-		p {
-			font-size: 1rem;
-		}
-	}
-}
-@media screen and (max-width: 600px) {
-	.illustration {
-		width: 70%;
-	}
-	.get-started {
-		// width: 92%;
-		width: 100%;
-		padding: 16px;
-		// position: absolute;
-		// bottom: 50%;
-	}
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 // Prevent scroll when opening nav
 .noscroll {
-	// position:fixed;
-	overflow: hidden;
-	// height: 100%;
-	// max-height: 5vh;
+  overflow: hidden;
 }
 
-// about us
-.about-us {
-	padding-top: 80px;
-	padding-bottom: 80px;
-	position: relative;
-	z-index: 5;
-	font-family: "Ubuntu", sans-serif;
-
-	.about-us-content {
-		display: flex;
-		justify-content: space-between;
-
-		.text {
-			width: 40%;
-			align-self: center;
-
-			.para {
-				color: #000;
-			}
-			p {
-				color: #555;
-			}
-			button {
-				background: none;
-				border: 2px solid #fff;
-				padding: 15px;
-				border-radius: 50px;
-				color: $main2;
-				font-weight: bold;
-				letter-spacing: 1px;
-				cursor: pointer;
-				transition: all 0.4s;
-				background-color: $mainDark;
-
-				&:hover {
-					background-color: $mainDark;
-					border-color: #fff;
-					color: #fff;
-				}
-			}
-		}
-		.pic {
-			width: 40%;
-			transition: all 0.3s;
-			border-radius: 10px;
-			background-color: $main2;
-			align-self: center;
-
-			img {
-				width: 100%;
-				border-radius: 10px;
-				transform: rotateZ(10deg);
-				padding: 3px;
-				background-color: $mainDark;
-				transition: all 0.3s;
-			}
-			&:hover {
-				transform: rotateZ(-10deg);
-				background-color: transparent;
-				img {
-					background-color: $main2;
-				}
-			}
-		}
-	}
-}
-@media screen and (min-width: 1400px) {
-	.about-us .about-us-content {
-		.text {
-			width: 50%;
-			font-size: 1.3rem;
-		}
-	}
-}
-@media screen and (max-width: 1024px) {
-	.about-us {
-		.about-us-content {
-			flex-direction: column;
-
-			.text {
-				width: 100%;
-				margin-bottom: 80px;
-			}
-			.pic {
-				width: 60%;
-			}
-		}
-	}
-}
-@media screen and (max-width: 768px) {
-	.about-us .about-us-content .pic {
-		width: 80%;
-	}
-}
 .heading {
-	text-transform: uppercase;
-	color: $main2;
-	margin: 0;
+  text-transform: uppercase;
+  color: $main2;
+  margin: 0;
 }
 .subheading {
-	margin-top: 10px;
-	color: $mainDark;
-	font-size: 1.6rem;
-}
-
-// services
-.services {
-	padding-top: 80px;
-	padding-bottom: 80px;
-	font-family: "Ubuntu", sans-serif;
-	background-color: #ececec;
-
-	.services-headline {
-		display: flex;
-		justify-content: space-between;
-
-		.heading-area {
-			width: 30%;
-			align-self: center;
-		}
-		button {
-			background: none;
-			border: 2px solid $mainDark;
-			padding: 15px;
-			border-radius: 50px;
-			color: $mainDark;
-			font-weight: bold;
-			letter-spacing: 1px;
-			cursor: pointer;
-			transition: all 0.4s;
-			align-self: center;
-
-			&:hover {
-				background-color: $mainDark;
-				border-color: $mainDark;
-				color: #fff;
-			}
-		}
-	}
-	.services-types {
-		display: flex;
-		justify-content: space-between;
-
-		.type {
-			background-color: #fff;
-			padding: 40px 30px;
-			border-radius: 10px;
-			box-shadow: 2px 6px 11px 2px #ddd;
-			transition: all 0.3s;
-			cursor: pointer;
-			width: 22%;
-
-			&:hover {
-				background-color: $mainDark;
-			}
-
-			.icon {
-				padding: 20px;
-				// margin-right: 5px;
-				display: inline-block;
-				border-radius: 50%;
-				border: 3px solid $mainDark;
-				transition: all 0.3s;
-				// box-shadow: 0px 0px 2px $mainDark;
-			}
-			i {
-				// text-shadow: 0 0 1px #000;
-				color: $mainDark;
-				height: 54px;
-				width: 54px;
-				transition: all 0.3s;
-
-				&:before {
-					position: relative;
-					top: 2px;
-					right: 2px;
-				}
-			}
-			h4 {
-				color: $darkBlue;
-				font-size: 20px;
-			}
-			&:hover .icon {
-				border-color: $main2;
-			}
-			&:hover i {
-				color: $main2;
-			}
-			&:hover h4 {
-				color: #fff;
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 992px) {
-	.services {
-		.services-headline {
-			.heading-area {
-				width: 50%;
-			}
-		}
-		.services-types {
-			// justify-content: unset;
-			flex-wrap: wrap;
-			// flex-direction: column;
-			.type {
-				flex: 0 48%;
-				width: 78%;
-				align-self: center;
-				margin-bottom: 25px;
-				h4 {
-					font-size: 1.2rem;
-				}
-			}
-		}
-	}
-}
-@media screen and (max-width: 600px) {
-	.services {
-		.services-headline {
-			flex-direction: column;
-			.heading-area {
-				width: 100%;
-			}
-			button {
-				margin-top: 10px;
-				margin-bottom: 40px;
-			}
-		}
-		.services-types {
-			flex-direction: column;
-			.type {
-				width: 90%;
-			}
-		}
-	}
-}
-
-// apply
-.apply {
-	padding-top: 80px;
-	padding-bottom: 80px;
-	font-family: "Ubuntu", sans-serif;
-	background-image: url(../images/house.jpeg);
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	position: relative;
-
-	.overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		background-color: $mainDark;
-		opacity: 0.9;
-	}
-	.inner-container {
-		position: relative;
-		z-index: 2;
-	}
-	.subheading {
-		color: #fff;
-		margin-bottom: 15px;
-	}
-	.heading {
-		font-size: 14px;
-		width: 50%;
-		line-height: 1.5;
-	}
-	.registration {
-		display: flex;
-		justify-content: space-between;
-		margin-top: 40px;
-
-		.reg-way {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			background-color: #fff;
-			padding: 30px;
-			width: 47%;
-			border-radius: 10px;
-			box-shadow: 12px 11px 10px 4px $mainDark;
-			transition: all 0.3s;
-			cursor: pointer;
-
-			.icon {
-				padding: 10px;
-				// margin-right: 5px;
-				display: inline-block;
-				border-radius: 50%;
-				border: 3px solid $mainDark;
-				transition: all 0.3s;
-				display: flex;
-				align-self: center;
-				margin-right: 15px;
-				// box-shadow: 0px 0px 2px $mainDark;
-			}
-			i {
-				// text-shadow: 0 0 1px #000;
-				color: $mainDark;
-				height: 54px;
-				width: 54px;
-				transition: all 0.3s;
-
-				&:before {
-					position: relative;
-					top: 2px;
-					right: -2px;
-				}
-			}
-			.inner-text {
-				width: 80%;
-
-				h4 {
-					color: $mainDark;
-					margin-bottom: 10px;
-				}
-				p {
-					color: rgba(51, 60, 80, 0.77);
-					font-weight: normal;
-				}
-			}
-			&:hover {
-				background-color: $mainDark;
-			}
-			&:hover .icon {
-				border-color: $main2;
-			}
-			&:hover i {
-				color: $main2;
-			}
-			&:hover h4 {
-				color: #fff;
-			}
-			&:hover p {
-				color: rgba(216, 216, 216, 0.77);
-			}
-		}
-	}
-}
-@media screen and (min-width: 1400px) {
-	.apply .inner-container {
-		h3 {
-			font-size: 1.8rem;
-		}
-		h4 {
-			font-size: 1rem;
-		}
-	}
-}
-@media screen and (max-width: 992px) {
-	.apply {
-		.heading {
-			width: 100%;
-		}
-		.registration {
-			flex-direction: column;
-			align-items: center;
-
-			.reg-way {
-				width: 80%;
-				margin-bottom: 40px;
-				padding: 22px;
-			}
-		}
-	}
-}
-@media screen and (max-width: 600px) {
-	.apply {
-		.registration {
-			.reg-way {
-				width: 100%;
-				// padding: 10px;
-				// display: flex;
-				flex-direction: column;
-
-				.icon {
-					padding: 10px;
-					i:before {
-						height: 10px;
-					}
-				}
-				.inner-text {
-					width: 100%;
-				}
-			}
-		}
-	}
+  margin-top: 10px;
+  color: $mainDark;
+  font-size: 1.6rem;
 }
 
 // footer
 .footer {
-	padding-top: 60px;
-	padding-bottom: 60px;
-	font-family: "Ubuntu", sans-serif;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-family: "Ubuntu", sans-serif;
 
-	.footer-content {
-		display: flex;
-		flex-direction: row;
-		// width: 70%;
-		justify-content: space-between;
-		margin-top: 40px;
-		flex-wrap: wrap;
-	}
-	.logo-area {
-		// flex-grow: 0.1;
-		margin-bottom: 40px;
-	}
-	.logo {
-		width: 30%;
-		text-transform: uppercase;
-		color: $mainDark;
-		font-weight: bold;
-		font-family: "Fjalla One", sans-serif;
-		letter-spacing: 2px;
-		font-size: 1.5rem;
-		pointer-events: none;
-		// text-align: center;
-		align-items: center;
-
-		span {
-			background-color: #f7b63c;
-			padding: 6px;
-			border-radius: 50%;
-			font-size: 1.7rem;
-			position: relative;
-			color: #fff;
-			bottom: 5px;
-		}
-	}
-	.personal-info {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-
-		.info-part {
-			display: flex;
-
-			i {
-				color: $mainDark;
-			}
-			p {
-				color: rgba(10, 23, 63, 0.77);
-				margin-top: 0;
-				margin-left: 15px;
-			}
-		}
-		.icons {
-			// margin-left: 20px;
-			margin-top: 10px;
-			i {
-				color: $mainDark;
-				padding: 4px;
-				border: 2px solid $mainDark;
-				border-radius: 50%;
-				margin-right: 10px;
-			}
-			a:last-child i {
-				color: $main2;
-				border-color: $main2;
-				cursor: pointer;
-			}
-		}
-	}
-	.section {
-		.underlined {
-			color: $mainDark;
-			position: relative;
-			margin-bottom: 30px;
-
-			&::after {
-				content: "";
-				position: absolute;
-				width: 40%;
-				height: 3px;
-				background-color: $main2;
-				border-radius: 10px;
-				bottom: -8px;
-				left: 0;
-			}
-		}
-		ul {
-			list-style: none;
-			padding: 0;
-			li {
-				margin-bottom: 15px;
-				a {
-					text-decoration: none;
-					color: rgba(10, 23, 63, 0.77);
-					transition: all 0.3s;
-
-					&:hover {
-						color: $main2;
-					}
-				}
-			}
-		}
-	}
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    // width: 70%;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+  .logo-area {
+    // flex-grow: 0.1;
+    margin-bottom: 40px;
+  }
+  .logo {
+    text-transform: uppercase;
+    color: $mainDark;
+    font-weight: bold;
+    font-family: "Fjalla One", sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    pointer-events: none;
+    span {
+      background-color: #f7b63c;
+      padding: 6px;
+      border-radius: 50%;
+      font-size: 1.7rem;
+      position: relative;
+      color: #fff;
+      bottom: 5px;
+    }
+  }
+  .personal-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .info-part {
+      display: flex;
+      i {
+        color: $mainDark;
+      }
+      p {
+        color: rgba(10, 23, 63, 0.77);
+        margin-top: 0;
+        margin-left: 15px;
+      }
+    }
+    .icons {
+      margin-top: 10px;
+      i {
+        color: $mainDark;
+        padding: 4px;
+        border: 2px solid $mainDark;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      a:last-child i {
+        color: $main2;
+        border-color: $main2;
+        cursor: pointer;
+      }
+    }
+  }
+  .section {
+    .underlined {
+      color: $mainDark;
+      position: relative;
+      margin-bottom: 30px;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 40%;
+        height: 3px;
+        background-color: $main2;
+        border-radius: 10px;
+        bottom: -8px;
+        left: 0;
+      }
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        margin-bottom: 15px;
+        a {
+          text-decoration: none;
+          color: rgba(10, 23, 63, 0.77);
+          transition: all 0.3s;
+          &:hover {
+            color: $main2;
+          }
+        }
+      }
+    }
+  }
 }
 @media screen and (min-width: 1400px) {
-	.footer .footer-content {
-		font-size: 1.3rem;
-	}
+  .footer .footer-content {
+    font-size: 1.3rem;
+  }
 }
 @media screen and (max-width: 426px) {
-	.footer {
-		.footer-content {
-			flex-direction: column;
-			align-content: center;
-		}
-	}
+  .footer {
+    .footer-content {
+      flex-direction: column;
+      align-content: center;
+    }
+  }
 }
 
 // copyright
 .copyright {
-	// padding: 5px;
-	background-color: $mainDark;
-	font-family: "Ubuntu", sans-serif;
-
-	.cp-content {
-		display: flex;
-		justify-content: space-between;
-		color: #fff;
-
-		.section {
-			p {
-				span {
-					font-weight: bold;
-
-					span {
-						color: $main2;
-					}
-				}
-				.highlight {
-					font-weight: bold;
-					background-color: rgba(#fff, 0.9);
-					padding: 5px;
-					border-radius: 10px;
-					color: $mainDark;
-				}
-			}
-		}
-	}
+  // padding: 5px;
+  background-color: $mainDark;
+  font-family: "Ubuntu", sans-serif;
+  .cp-content {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    .section {
+      p {
+        span {
+          font-weight: bold;
+          span {
+            color: $main2;
+          }
+        }
+        .highlight {
+          font-weight: bold;
+          background-color: rgba(#fff, 0.9);
+          padding: 5px;
+          border-radius: 10px;
+          color: $mainDark;
+        }
+      }
+    }
+  }
 }
 @media screen and (min-width: 1400px) {
-	.copyright .cp-content {
-		font-size: 1.2rem;
-	}
+  .copyright .cp-content {
+    font-size: 1.2rem;
+  }
 }
 @media screen and (max-width: 632px) {
-	.copyright .cp-content {
-		flex-direction: column;
-		align-items: center;
-	}
-	.hide-mobile {
-		display: none;
-	}
-}
-@media only screen and  (max-device-height: 500px) and (orientation: landscape) {
-	svg{
-		display: none;
-	}
-	.landing-content{
-		padding-bottom: 30px;
-	}
+  .copyright .cp-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hide-mobile {
+    display: none;
+  }
 }

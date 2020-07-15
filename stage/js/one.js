@@ -38,7 +38,7 @@ window.addEventListener("scroll", () => {
 	}
 });
 
-let links = document.querySelectorAll("a");
-links.forEach((link) => {
-	link.addEventListener("click", (e) => e.preventDefault());
-});
+// let links = document.querySelectorAll("a");
+// links.forEach((link) => {
+// 	link.addEventListener("click", (e) => e.preventDefault());
+// });

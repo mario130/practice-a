@@ -6,29 +6,11 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title #{pageTitle}
     include pug/layout/styles
+
   body
     .landing-page
       .overlay
-      .navbar
-        .container
-          .navbar-elements
-            .logo twenty
-              span 11
-            ul.nav-links
-              li
-                a(href="#") Home
-              li
-                a(href="#") Our Rent
-              li
-                a(href="#") Why US
-              li
-                a(href="#") FAQ
-              li
-                a(href="#") Apply Now
-            .burger
-              .line1
-              .line2
-              .line3
+      include pug/components/navbar
       .landing-content
         .illustration
           img(src="images/home.svg", alt="")
@@ -88,8 +70,8 @@ html(lang="en")
       .overlay
       .container
         .inner-container
-          h3.subheading To apply for a Twenty11 home
-          h4.heading Bids on twenty11 homes will not be considered if you have not completed our pre-registeration process.
+          h3.subheading To apply for a Tween11 home
+          h4.heading Bids on Tween11 homes will not be considered if you have not completed our pre-registeration process.
           .registration
             .reg-way
               .icon
@@ -101,95 +83,11 @@ html(lang="en")
               .icon
                 i.fas.fa-file-signature.fa-3x.fa-fw
               .inner-text
-                h4 Complete Twenty11 pre-registration
-                p complete out Twenty11 pre-registeration process in a few minutes.
+                h4 Complete Tween11 pre-registration
+                p complete out Tween11 pre-registeration process in a few minutes.
 
     //- footer
-    .footer
-      .container
-        .footer-content
-          .logo-area
-            .logo
-              h2 twenty
-                span 11
-            .personal-info
-              .info-part
-                i.fas.fa-map-marker-alt
-                .text
-                  p Fake address @ Egypt
-                  p Gomhorya st. 71515
-              .info-part
-                i.fas.fa-phone
-                p 01098090927
-              .info-part
-                i.far.fa-paper-plane
-                p mario130dev@gmail.com
-              .icons
-                a(href="#")
-                  i.fab.fa-facebook.fa-md
-                a(href="#")
-                  i.fab.fa-twitter.fa-md
-                a(href="https://github.com/mario130")
-                  i.fab.fa-github.fa-md
-          .footer-sections
-          .section
-            h4.underlined General info
-            ul
-              li
-                a(href="#") Apply NOW
-              li
-                a(href="#") Why choose us?
-              li
-                a(href="#") Working with us
-              li
-                a(href="#") Our companions
-              li
-                a(href="#") Our bonus
-          .section
-            h4.underlined Formal bits
-            ul
-              li
-                a(href="#") Startup
-              li
-                a(href="#") Policies
-              li
-                a(href="#") Give us your feedback
-              li
-                a(href="#") FAQ
-              li
-                a(href="#") Privacy policy
-              li
-                a(href="#") Contact us
-          .section
-            h4.underlined Twenty11 info
-            ul
-              li
-                a(href="#") My account
-              li
-                a(href="#") My surveys
-              li
-                a(href="#") Latest offers
-              li
-                a(href="#") Our contributions
-              li
-                a(href="#") Licences
-              li
-                a(href="#") Social media
-
-    //- copyright
-    .copyright
-      .container
-        .cp-content
-          .section
-            p Copyright &copy; 2020 
-              span Twenty
-                span 11
-          .section.hide-mobile
-            p All rights reserved
-          .section
-            p Developed by 
-              span.highlight  Mario Yonan
-
+    include pug/components/footer
 
 
     include pug/layout/scripts
