@@ -59,8 +59,3 @@ footerLists.forEach(list => {
     $(this).children('ul').slideToggle().parent().siblings().children('ul').slideUp()
   })
 })
-
-// let links = document.querySelectorAll("a");
-// links.forEach((link) => {
-// 	link.addEventListener("click", (e) => e.preventDefault());
-// });
