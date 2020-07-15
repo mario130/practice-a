@@ -120,6 +120,7 @@
     .burger {
       display: block;
       cursor: pointer;
+      z-index: 2;
     }
     .nav-links {
       position: absolute;

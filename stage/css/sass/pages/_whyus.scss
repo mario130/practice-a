@@ -1,15 +1,5 @@
 body {
-  font-family: "Ubuntu", sans-serif;
-  font-family: "Fjalla One", sans-serif;
-  font-family: "Montserrat", sans-serif;
-  font-family: "Poppins", sans-serif;
-  font-family: "Raleway", sans-serif;
   font-family: "Roboto", sans-serif;
-}
-.whyus .navbar {
-  background-color: $mainDark;
-  position: sticky;
-  top: 0;
 }
 
 .whyus-main {
@@ -18,10 +8,12 @@ body {
   // min-height: 80vh;
   // padding-top: 50px; THIS ONE FOR MEDIA QUERY!!!
   align-items: center;
+  padding: 40px 0;
   .text-content {
     // flex: 1;
-    width: 40%;
+    width: 50%;
     line-height: 1.5;
+    padding: 30px 0;
     // margin-right: 20px;
 
     .heading {
@@ -47,6 +39,7 @@ body {
       cursor: pointer;
       transition: all 0.4s;
       margin-bottom: 40px;
+      margin-top: 20px;
       &:hover {
         background-color: $mainDark;
         border-color: #fff;
@@ -72,7 +65,8 @@ body {
   }
   .pic {
     flex: 0.8;
-    padding: 80px 0 80px 60px;
+    padding-left: 60px;
+    // padding: 80px 0 80px 60px;
     img {
       width: 100%;
       // filter: drop-shadow(2px 2px 2px #000);
@@ -82,9 +76,8 @@ body {
 
 @media screen and (max-width: 1000px) {
   .whyus-main {
-    .text-content {
-      margin-top: 20px;
-      margin-bottom: 20px;
+    .pic{
+      padding: 0;
     }
   }
 }
@@ -92,9 +85,13 @@ body {
   .whyus-main {
     flex-direction: column-reverse;
     text-align: center;
+    padding: 0;
 
     .text-content {
       width: 100%;
+      .stats{
+        margin-bottom: 30px;
+      }
     }
     .pic {
       width: 80%;
@@ -139,5 +136,22 @@ body {
 @media screen and (max-width: 600px){
   .reasons-list{
     padding-left: 10px;
+  }
+  .reasons{
+    background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(244,244,244,1) 100%);
+
+    .reason{
+      line-height: 1.9;
+    }
+    .heading{
+      font-size: .9rem;
+    }
+    .subheading{
+      font-size: 1.4rem;
+    }
+  }
+  .whyus .footer{
+    padding-top: 0;
   }
 }

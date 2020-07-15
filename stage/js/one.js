@@ -41,11 +41,15 @@ if (document.title === "Homepage") {
       navbar.style.backgroundColor = "transparent";
     }
   });
+} else {
+  // navbar for why us page
+  const navbar = document.querySelector(".navbar");
+  navbar.style.backgroundColor = "#1e2d4d";
 }
-let navlinks = document.querySelectorAll('.nav-links li a');
-navlinks.forEach(link => {
-  if(link.dataset.page === document.title) link.classList.add('active')
-})
+let navlinks = document.querySelectorAll(".nav-links li a");
+navlinks.forEach((link) => {
+  if (link.dataset.page === document.title) link.classList.add("active");
+});
 
 // let links = document.querySelectorAll("a");
 // links.forEach((link) => {
