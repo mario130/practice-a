@@ -1,0 +1,111 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-family: "Fjalla One", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+.whyus .navbar {
+  background-color: $mainDark;
+  // position: sticky;
+  // top: 0;
+}
+
+.whyus-main {
+  display: flex;
+  justify-content: space-between;
+  // min-height: 80vh;
+  // padding-top: 50px; THIS ONE FOR MEDIA QUERY!!!
+  align-items: center;
+  .text-content {
+    // flex: 1;
+    width: 40%;
+    line-height: 1.5;
+    // margin-right: 20px;
+
+    .heading{
+      font-weight: normal;
+      font-family: "Ubuntu", sans-serif;
+    }
+    .subheading {
+      margin: 25px 0;
+      font-family: "Roboto", sans-serif;
+    }
+    p {
+      color: #555;
+      line-height: 1.6;
+    }
+    button {
+      background: none;
+      border: 2px solid $main2;
+      padding: 15px;
+      border-radius: 50px;
+      color: $main2;
+      font-weight: bold;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.4s;
+      margin-bottom: 40px;
+      &:hover {
+        background-color: $mainDark;
+        border-color: #fff;
+        color: #fff;
+      }
+    }
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      .stat {
+        text-align: center;
+        h5 {
+          margin: 0;
+          font-weight: normal;
+          font-size: 26px;
+          font-family: "Poppins", sans-serif;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .pic {
+    flex: .8;
+    padding: 80px 0 80px 60px;
+    img {
+      width: 100%;
+      // filter: drop-shadow(2px 2px 2px #000);
+    }
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .whyus-main{
+    .text-content{
+      margin-top: 20px;
+    }
+  }
+}
+@media screen and (max-width: 768px){
+  .whyus-main{
+    flex-direction: column-reverse;
+    text-align: center;
+
+    .text-content{
+      width: 100%;
+    }
+    .pic{
+      width: 80%;
+      padding: 0;
+      margin: 20px 0;
+    }
+  }
+}
+@media screen and (max-width: 425px){
+  .whyus-main{
+    .subheading{
+      line-height: 1.2;
+    }
+  }
+}

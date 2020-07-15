@@ -8,12 +8,31 @@ html(lang="en")
     include pug/layout/styles
 
   body
-    include pug/components/navbar
+    .whyus
+      include pug/components/navbar
 
+    .container
+      .whyus-main
+        .text-content
+          h4.heading Why choose us?
+          h3.subheading We're comitted to providing the best quality materials and customer support
+          p In order to meet this promise, we vow to only hire friendly, positive people that share our core values, passions for helping others and obsession with the quality of the materials.
+          button See offers 
+            i.fas.fa-angle-double-right
+          .stats
+            .stat
+              h5 1400
+              p happy clients
+            .stat
+              h5 50
+              p languages
+            .stat
+              h5 20+
+              p years of experience
+        .pic
+          img(src="images/whyus-team.svg", alt="")
+        
 
-
-
-    include pug/components/footer
-
-
+    .whyus
+      include pug/components/footer
     include pug/layout/scripts
