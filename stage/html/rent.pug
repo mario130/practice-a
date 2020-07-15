@@ -1,0 +1,44 @@
+- var pageTitle = "Rent";
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{pageTitle}
+    include pug/layout/styles
+
+  body
+    include pug/components/navbar
+
+    //- question
+    .house
+      .overlay
+      .container
+        h3.subheading How we set our rents?
+    
+    //- answer
+    .container
+      .sections
+        section
+          p We have a unique approach to setting rents. We’ll set your rent based on the income of your household, so that you have a rent you can afford. The rent will stay the same (apart from any standard annual adjustments we make) for the duration of the term of your tenancy. There are circumstances where your rent may change ie we might offer you a lower rent for a short period time if your personal circumstance drastically change.
+        section
+          .text-part
+            h3.subheading What happens at the end of the tenancy period?
+            p All of our tenants start on a one-year tenancy agreement. Before this comes to an end, we will review the terms of your tenancy and decide whether we offer you the option to renew. The period of your renewed tenancy will depend on how well you have conducted your tenancy, as well as your current financial circumstances. At the point of renewal, we will take into account your current household financial circumstances to confirm the rent payable for the next tenancy period.
+          .pic
+            img(src="images/rent-2.jpeg", alt="")
+        section
+          .text-part
+            h3.subheading Will the rent I pay be the rent that’s advertised?
+            p This will depend on your households financial circumstances.  When you are offered a property, we will use the information you have shared with us to confirm what the weekly rent will be. For some people this will be the advertised rent, for others it may be lower.
+          .pic
+            img(src="images/rent-4.jpeg", alt="")
+
+
+
+
+
+
+    .rent
+      include pug/components/footer
+    include pug/layout/scripts

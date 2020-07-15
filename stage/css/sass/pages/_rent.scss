@@ -1,0 +1,119 @@
+.house {
+  background-image: url(../images/house.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-position: right -140px bottom 40px;
+
+  position: relative;
+  padding: 80px 0;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $mainDark;
+    opacity: 0.9;
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  .subheading {
+    color: #fff;
+    // margin: 0;
+    margin-bottom: 15px;
+  }
+}
+
+// answer
+.sections {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+
+  section {
+    &:nth-of-type(2) {
+      margin: 80px 0;
+    }
+    p {
+      line-height: 1.6;
+      color: #555;
+    }
+    .subheading{
+      margin-top: 0;
+    }
+    &:not(:first-of-type) {
+      display: flex;
+      justify-content: space-between;
+      // align-items: center;
+
+      .text-part {
+        flex: 1;
+      }
+      .pic {
+        flex: 0.7;
+        // width: 90%;
+        margin-right: 0;
+        margin-left: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      // align-items: center;
+      .pic {
+      }
+    }
+    &:nth-of-type(3) {
+      flex-direction: row-reverse;
+
+      .pic {
+        margin-right: 20px;
+        margin-left: 0;
+      }
+    }
+    &:not(:nth-of-type(2)) {
+    }
+  }
+}
+
+// footer specific modifications
+.rent .footer {
+  background-color: $mainDark;
+
+  .section .underlined {
+    color: #fff;
+  }
+  .footer-content * {
+    color: #fff;
+  }
+  .personal-info .info-part i,
+  .personal-info .info-part p {
+    color: #fff;
+  }
+  .personal-info .icons i {
+    color: #fff;
+    border-color: #fff;
+  }
+}
+.rent .copyright {
+  background-color: #fff;
+
+  .cp-content .section p {
+    color: $mainDark;
+
+    .highlight {
+      font-weight: bold;
+      color: #fff;
+      background-color: rgb(30, 45, 77);
+      padding: 5px;
+      border-radius: 10px;
+    }
+  }
+}
