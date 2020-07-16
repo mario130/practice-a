@@ -57,9 +57,7 @@
         border-radius: 50%;
         margin-right: 10px;
       }
-      a:last-child i {
-        color: $main2;
-        border-color: $main2;
+      a i {
         cursor: pointer;
       }
     }
@@ -93,6 +91,11 @@
 @media screen and (min-width: 1400px) {
   .footer .footer-content {
     font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 596px) {
+  .footer .footer-content{
+    justify-content: space-around;
   }
 }
 @media screen and (max-width: 426px) {
@@ -196,5 +199,8 @@
   }
   .hide-mobile {
     display: none;
+  }
+  .footer .section h4{
+    margin: 15px 0;
   }
 }
