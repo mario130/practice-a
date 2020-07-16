@@ -1,0 +1,31 @@
+- var pageTitle = "Apply now";
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{pageTitle}
+    include pug/layout/styles
+
+  body
+    include pug/components/navbar
+    
+    .apply-page
+      .bckg
+      .content
+        h2.line
+          span We're so sorry!
+        h4.subheading Under construction
+        p We're making lots of improvements and will be up and running soon.
+        .email-part
+          input(type="text" placeholder="Enter your email and get notified") 
+          a(href="#")
+            i.fas.fa-arrow-right
+        h2.line-complete
+          span 
+    
+    
+
+    //- .reverse-clr
+    include pug/components/footer
+    include pug/layout/scripts
