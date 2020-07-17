@@ -36,13 +36,30 @@ svg {
 }
 .illustration {
   width: 30%;
-  // position: relative;
   // top: ;
   z-index: 2;
   order: 2;
-
+  // opacity: 0;
+  animation: fadeIn 2.5s;
+  position: relative;
+  
   img {
+    filter: drop-shadow(3px 3px 10px #000);
     width: 100%;
+  }
+}
+@keyframes fadeIn {
+  0%{
+    top: -200px;
+    opacity: 0;
+
+  }
+  60%{
+    top: 30px;
+  }
+  100%{
+    top: 0px;
+    opacity: 1;
   }
 }
 
