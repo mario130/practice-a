@@ -19,7 +19,7 @@ Building websites from scratch is fun although it's time consuming, but the fina
 - [ ] Add one more page
 
 ### My portfolio
- Have a look at my works [Mario Yonan](https://mario130.github.io/Portfolio/dist/homepage.html).
+ Have a look at my works [Mario Yonan](http://mario130.github.io/Portfolio).
 
 ### Contact me
 
